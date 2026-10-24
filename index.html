@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Aula UDI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0f14;--panel:#121a22;--panel2:#16202a;--ink:#e8f0f7;--muted:#9fb0c1;--line:#24313d;
+  --acc:#4cc9e8;--acc-ink:#062330;--ok:#6fd19a;--alert:#ff8a8a;color-scheme:dark}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#f5f7f9;--panel:#ffffff;--panel2:#eef3f7;
+  --ink:#13202b;--muted:#566676;--line:#d6dee6;--acc:#0b7fa3;--acc-ink:#ffffff;--ok:#1d7a4a;--alert:#b3261e;color-scheme:light}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "IBM Plex Sans","Segoe UI",system-ui,sans-serif}
+a{color:var(--acc)}
+.envoltura{max-width:1040px;margin:0 auto;padding:32px 16px 72px}
+.antetitulo{color:var(--acc);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;line-height:1.2;margin:.25em 0 .4em}
+h1{font-size:clamp(1.9rem,4.5vw,2.8rem)}
+h2{font-size:1.5rem}
+.bajada{color:var(--muted);max-width:66ch;margin:0 0 8px}
+.cabecera{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:28px}
+.firma{color:var(--muted);font-size:.92rem;margin-top:14px}
+.rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.tarjeta{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 20px 18px;display:flex;flex-direction:column;gap:8px}
+a.tarjeta{color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
+a.tarjeta:hover,a.tarjeta:focus-visible{border-color:var(--acc);outline:none;transform:translateY(-2px)}
+.tarjeta h2,.tarjeta h3{margin:0}
+.meta{color:var(--muted);font-size:.9rem}
+.sincronica{display:grid;grid-template-columns:96px 1fr;gap:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.sincronica + .sincronica{margin-top:14px}
+.numero{font:600 2.6rem/1 "Source Serif 4",Georgia,serif;color:var(--acc)}
+.numero small{display:block;font:600 .72rem "IBM Plex Sans",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.tesis{font-family:"Source Serif 4",Georgia,serif;font-size:1.12rem;margin:4px 0 12px;color:var(--ink)}
+.acciones{display:flex;flex-wrap:wrap;gap:10px}
+.boton{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:10px;font:600 .95rem "IBM Plex Sans",sans-serif;
+  text-decoration:none;border:1px solid var(--acc);background:var(--acc);color:var(--acc-ink);cursor:pointer}
+.boton.secundario{background:transparent;color:var(--acc)}
+.pendiente{color:var(--muted);font-size:.92rem;border:1px dashed var(--line);border-radius:10px;padding:10px 14px;display:inline-block}
+.candado{max-width:520px;margin:10vh auto 0;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 24px}
+.candado form{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+.candado input{flex:1 1 220px;min-height:46px;font:17px "IBM Plex Sans",sans-serif;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.candado input:focus{outline:2px solid var(--acc);outline-offset:1px}
+.error{color:var(--alert);min-height:1.4em;margin:6px 0 0}
+.nota{color:var(--muted);font-size:.88rem;margin-top:36px;border-top:1px solid var(--line);padding-top:14px}
+.volver{color:var(--muted);text-decoration:none;font-size:.92rem}
+.volver:hover{color:var(--acc)}
+.pie{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+button.enlace{background:none;border:0;padding:0;color:var(--muted);font:inherit;text-decoration:underline;cursor:pointer}
+@media (max-width:560px){.sincronica{grid-template-columns:1fr;gap:6px}.numero{font-size:2rem}}
+</style></head>
+<body>
+<div class="envoltura">
+<header class="cabecera">
+<div class="antetitulo">Universidad del Istmo</div>
+<h1>Aula de los cursos</h1>
+<p class="bajada">Aquí quedan las presentaciones y las grabaciones editadas de cada sesión sincrónica, para repasarlas o ver la que se perdió. Las entregas, los foros y las calificaciones siguen en Canvas.</p>
+<p class="firma">Dr. Manuel S. Nazas R., docente de posgrado</p>
+</header>
+<div class="rejilla">
+<a class="tarjeta" href="epidemiologia-demografia/"><span class="antetitulo">Maestría en Gerencia de Hospitales</span><h2>Epidemiología y Demografía</h2><span class="meta">Octubre y noviembre de 2026</span><span class="meta">Presentaciones y grabaciones de las sesiones sincrónicas</span></a>
+</div>
+<p class="nota">Cada curso se abre con la clave que el docente publica en el anuncio de Canvas. El material es para uso de los participantes del curso: no lo comparta fuera del grupo.</p>
+</div>
+</body></html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Epidemiología y Demografía</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0f14;--panel:#121a22;--panel2:#16202a;--ink:#e8f0f7;--muted:#9fb0c1;--line:#24313d;
+  --acc:#4cc9e8;--acc-ink:#062330;--ok:#6fd19a;--alert:#ff8a8a;color-scheme:dark}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#f5f7f9;--panel:#ffffff;--panel2:#eef3f7;
+  --ink:#13202b;--muted:#566676;--line:#d6dee6;--acc:#0b7fa3;--acc-ink:#ffffff;--ok:#1d7a4a;--alert:#b3261e;color-scheme:light}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "IBM Plex Sans","Segoe UI",system-ui,sans-serif}
+a{color:var(--acc)}
+.envoltura{max-width:1040px;margin:0 auto;padding:32px 16px 72px}
+.antetitulo{color:var(--acc);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;line-height:1.2;margin:.25em 0 .4em}
+h1{font-size:clamp(1.9rem,4.5vw,2.8rem)}
+h2{font-size:1.5rem}
+.bajada{color:var(--muted);max-width:66ch;margin:0 0 8px}
+.cabecera{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:28px}
+.firma{color:var(--muted);font-size:.92rem;margin-top:14px}
+.rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.tarjeta{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 20px 18px;display:flex;flex-direction:column;gap:8px}
+a.tarjeta{color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
+a.tarjeta:hover,a.tarjeta:focus-visible{border-color:var(--acc);outline:none;transform:translateY(-2px)}
+.tarjeta h2,.tarjeta h3{margin:0}
+.meta{color:var(--muted);font-size:.9rem}
+.sincronica{display:grid;grid-template-columns:96px 1fr;gap:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.sincronica + .sincronica{margin-top:14px}
+.numero{font:600 2.6rem/1 "Source Serif 4",Georgia,serif;color:var(--acc)}
+.numero small{display:block;font:600 .72rem "IBM Plex Sans",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.tesis{font-family:"Source Serif 4",Georgia,serif;font-size:1.12rem;margin:4px 0 12px;color:var(--ink)}
+.acciones{display:flex;flex-wrap:wrap;gap:10px}
+.boton{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:10px;font:600 .95rem "IBM Plex Sans",sans-serif;
+  text-decoration:none;border:1px solid var(--acc);background:var(--acc);color:var(--acc-ink);cursor:pointer}
+.boton.secundario{background:transparent;color:var(--acc)}
+.pendiente{color:var(--muted);font-size:.92rem;border:1px dashed var(--line);border-radius:10px;padding:10px 14px;display:inline-block}
+.candado{max-width:520px;margin:10vh auto 0;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 24px}
+.candado form{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+.candado input{flex:1 1 220px;min-height:46px;font:17px "IBM Plex Sans",sans-serif;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.candado input:focus{outline:2px solid var(--acc);outline-offset:1px}
+.error{color:var(--alert);min-height:1.4em;margin:6px 0 0}
+.nota{color:var(--muted);font-size:.88rem;margin-top:36px;border-top:1px solid var(--line);padding-top:14px}
+.volver{color:var(--muted);text-decoration:none;font-size:.92rem}
+.volver:hover{color:var(--acc)}
+.pie{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+button.enlace{background:none;border:0;padding:0;color:var(--muted);font:inherit;text-decoration:underline;cursor:pointer}
+@media (max-width:560px){.sincronica{grid-template-columns:1fr;gap:6px}.numero{font-size:2rem}}
+</style></head>
+<body>
+<div class="envoltura"><div class="candado">
+<div class="antetitulo">Maestría en Gerencia de Hospitales</div>
+<h1 style="font-size:1.8rem">Epidemiología y Demografía</h1>
+<p>Este material es para los participantes del curso. Escriba la clave que el docente publicó en el anuncio de Canvas. Este navegador la recordará.</p>
+<form id="f"><input id="clave" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Clave del curso" aria-label="Clave del curso">
+<button class="boton" type="submit">Abrir</button></form>
+<p class="error" id="error" role="alert"></p>
+<p><a class="volver" href="../">Volver a la portada del aula</a></p>
+</div></div>
+<script type="application/json" id="datos">{"s": "XGTC5zAmshhEP9UaTnNmPw==", "iv": "cBmlHhMX2qmnAi57", "it": 200000, "c": "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"}</script>
+<script>
+
+function normClave(s){return s.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,'-');}
+function b64(s){var b=atob(s),u=new Uint8Array(b.length);for(var i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u;}
+async function llaveDe(clave,sal,it){
+  var base=await crypto.subtle.importKey('raw',new TextEncoder().encode(normClave(clave)),'PBKDF2',false,['deriveKey']);
+  return crypto.subtle.deriveKey({name:'PBKDF2',salt:sal,iterations:it,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['decrypt']);
+}
+async function abrirCon(d,clave){
+  try{var k=await llaveDe(clave,b64(d.s),d.it); return new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(d.iv)},k,b64(d.c)));}
+  catch(e){return null;}
+}
+function claveGuardada(c){try{return localStorage.getItem('udi-clave-'+c)||sessionStorage.getItem('udi-clave-'+c);}catch(e){return null;}}
+function guardarClave(c,v){try{localStorage.setItem('udi-clave-'+c,v);}catch(e){} try{sessionStorage.setItem('udi-clave-'+c,v);}catch(e){}}
+function olvidarClave(c){try{localStorage.removeItem('udi-clave-'+c);sessionStorage.removeItem('udi-clave-'+c);}catch(e){}}
+
+(function(){
+var C='epidemiologia-demografia', D=JSON.parse(document.getElementById('datos').textContent);
+async function abrir(v,callado){
+  var t=await abrirCon(D,v);
+  if(t===null){ if(callado) olvidarClave(C); else document.getElementById('error').textContent='Esa clave no abre este curso. Revísela en el anuncio de Canvas.'; return; }
+  guardarClave(C,v);
+  /* El reproductor del deck (lienzo) arma su lámina con este texto ya descifrado. */
+  window.nazasLienzoHtml=t;
+  document.open(); document.write(t); document.close();
+}
+var g=claveGuardada(C); if(g) abrir(g,true);
+document.getElementById('f').onsubmit=function(e){e.preventDefault(); document.getElementById('error').textContent=''; abrir(document.getElementById('clave').value,false);};
+})();
+</script>
+</body></html>
