@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fundamentos de la Calidad y de la Auditoría en Salud</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0f14;--panel:#121a22;--panel2:#16202a;--ink:#e8f0f7;--muted:#9fb0c1;--line:#24313d;
+  --acc:#4cc9e8;--acc-ink:#062330;--ok:#6fd19a;--alert:#ff8a8a;color-scheme:dark}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#f5f7f9;--panel:#ffffff;--panel2:#eef3f7;
+  --ink:#13202b;--muted:#566676;--line:#d6dee6;--acc:#0b7fa3;--acc-ink:#ffffff;--ok:#1d7a4a;--alert:#b3261e;color-scheme:light}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "IBM Plex Sans","Segoe UI",system-ui,sans-serif}
+a{color:var(--acc)}
+.envoltura{max-width:1040px;margin:0 auto;padding:32px 16px 72px}
+.antetitulo{color:var(--acc);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;line-height:1.2;margin:.25em 0 .4em}
+h1{font-size:clamp(1.9rem,4.5vw,2.8rem)}
+h2{font-size:1.5rem}
+.bajada{color:var(--muted);max-width:66ch;margin:0 0 8px}
+.cabecera{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:28px}
+.firma{color:var(--muted);font-size:.92rem;margin-top:14px}
+.rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.tarjeta{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 20px 18px;display:flex;flex-direction:column;gap:8px}
+a.tarjeta{color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
+a.tarjeta:hover,a.tarjeta:focus-visible{border-color:var(--acc);outline:none;transform:translateY(-2px)}
+.tarjeta h2,.tarjeta h3{margin:0}
+.meta{color:var(--muted);font-size:.9rem}
+.sincronica{display:grid;grid-template-columns:96px 1fr;gap:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.sincronica + .sincronica{margin-top:14px}
+.numero{font:600 2.6rem/1 "Source Serif 4",Georgia,serif;color:var(--acc)}
+.numero small{display:block;font:600 .72rem "IBM Plex Sans",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.tesis{font-family:"Source Serif 4",Georgia,serif;font-size:1.12rem;margin:4px 0 12px;color:var(--ink)}
+.acciones{display:flex;flex-wrap:wrap;gap:10px}
+.boton{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:10px;font:600 .95rem "IBM Plex Sans",sans-serif;
+  text-decoration:none;border:1px solid var(--acc);background:var(--acc);color:var(--acc-ink);cursor:pointer}
+.boton.secundario{background:transparent;color:var(--acc)}
+.pendiente{color:var(--muted);font-size:.92rem;border:1px dashed var(--line);border-radius:10px;padding:10px 14px;display:inline-block}
+.candado{max-width:520px;margin:10vh auto 0;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 24px}
+.candado form{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+.candado input{flex:1 1 220px;min-height:46px;font:17px "IBM Plex Sans",sans-serif;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.candado input:focus{outline:2px solid var(--acc);outline-offset:1px}
+.error{color:var(--alert);min-height:1.4em;margin:6px 0 0}
+.nota{color:var(--muted);font-size:.88rem;margin-top:36px;border-top:1px solid var(--line);padding-top:14px}
+.volver{color:var(--muted);text-decoration:none;font-size:.92rem}
+.volver:hover{color:var(--acc)}
+.pie{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+button.enlace{background:none;border:0;padding:0;color:var(--muted);font:inherit;text-decoration:underline;cursor:pointer}
+@media (max-width:560px){.sincronica{grid-template-columns:1fr;gap:6px}.numero{font-size:2rem}}
+</style></head>
+<body>
+<div class="envoltura"><div class="candado">
+<div class="antetitulo">Maestría en Auditoría en Salud</div>
+<h1 style="font-size:1.8rem">Fundamentos de la Calidad y de la Auditoría en Salud</h1>
+<p>Este material es para los participantes del curso. Escriba la clave que el docente publicó en el anuncio de Canvas. Este navegador la recordará.</p>
+<form id="f"><input id="clave" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Clave del curso" aria-label="Clave del curso">
+<button class="boton" type="submit">Abrir</button></form>
+<p class="error" id="error" role="alert"></p>
+<p><a class="volver" href="../">Volver a la portada del aula</a></p>
+</div></div>
+<script type="application/json" id="datos">{"s": "bWAfALGTf6X7IsR1096NaA==", "iv": "o7jrB0J6wGxIjGt1", "it": 200000, "c": "xH96BYGMK5GN291XEwB5g/39qinwxH+inc9NrMt8aX6/SFerlrpF/cTfdvUFBRABK6sn2+CxZ2TpWQbYMb97F5nuW87G7WNaPYPukNllpy2JH2lT01LyJyJE47Qkckjs36Xcsx+B2uVA0WfCD4yQj0uhe+vwDHtxHxtIT8F0q9Vbr4nCi4M93+b1zHh2rmdLBkqoYx6Ngy5tBzaM3ArpXVT/yHP8Ngh4umip3/0k4lIRIz9dQdLlLkJehbjnf1z6bOLsZX30NwKVNE+4AQ/HXLnne/TsJqsfIRyV/a9GzYvRYuwLLdqR8Q+3BD/cv1pWAIoC6t5bz/QVXd13VYt/7yLGtGEY/LPkVuI2wmDaTWXtEvhA5djIjDrUYM/furir3Ormx/JccEtEI0zF4Z5AGz84trCJUHD5ILwdT6dSXXHPEexw1k2/TDDil88YjiUMRtdEc2TfBTgyO97vOz18zjNpVRwNo7emnUEL9jdELu+rKlR0FElZ6D53B5aq/S1qQMTuvagmeZztO7WR16ak37L+a7GLRLIbZ6MSTFiyOdlkqLhyVCM+Qy+Ci8kk91QviI0G3A40r7RWdNYBgjh0DTCylLzFYXmj3wA6KB9WaH/6TplF8Thp16ZbDCxxH/AONZYUpRNAjITiGZC2rtyZ2Q6Rz1ve3ahy6sQT622MOs95hFljLqYMsFP/unwIvKznzgEo5v+U7xBgEPMbtGkFSqGVyHXUWmKbndwLyI5KMGWcAshToItumhpmSsabZs5cpEZE0T759o4KW3kVUDRYtjVsLhClm0KhCaoJMiTo9w+XE0SgUsvf6H9GvjOIQ77KkHNwZoW1DfWPyxwzXJVjCB+vNz0ujIt3V0hDxC7oO9mgR9SaH6yNGeqVaNcN0+mzcZFcMH1ty2kshVBHNb5UKEXHddwjZJozCAlToJAlIgin8YSFVc+TtK80kPaFC4kUCnynhAerxrKisx5FNANclwxuEBVuK10Yb1OL2CszRIqv2pDDyFwRnCcFYVOFh5+D7Ae18NSHpS+N7UYppuV8L8tsmkIxrokbd7sLfyZchlysncWNx2gJ8EI9KGCr6Kp7Ts6G7+xV3nnzenn4S/b5fs3I+tCYrHLt2SdMjfiTicjUSJRJUkPa3C4DSj7uhsmC79wBEFRNrU1/HucTuy++ZzKKWzCFzaE0RIKxVP/M7iOsmCCgm+X6yinUPxuKm7sgr4r/nHv91vAyM6j//u0hIeiU0OWtAXD3SXjanzJWWpF4nyULF3ix9ZlcJa/fWT4IjYy0kcCkeHx3oNoppZx0pK6dK4pSlkh+zcB6pfBNpXizRptU5zi0JUpzH2PKK9ZZuttwt4bBYzaa9wkq7b82hx4+CuXEkslPHVGl0jQTxRBgoXgjw8aDvlyk+o6yDWehMS5WmwON/hCG1sh4ru3gFMPvSplfIkPav9qdrxPSTPr8Q6DJUX0m8F2BFvDgYUIoA7XwvRfZDi9VNSZwSb9tT+SCCQO26DtSIPvJv27WDnYSwg5Z8YiWXFW6wOJhXwEQVZO+Dsu+gypBPZ1e6xv+/LjBmVdnT96kgXfsyHi2Kd/yZUy8Mg4mMD7IjY8FlNNjFslCG2HaVhhuwPcxspUJQu57vhoV2bJ+V140V08neFGqQflJJgAvQiGm2db+XaWkRz24x/JIyNooxTWlVgzu1ZbhsBfFZDgOu+6PGwI+1PnxbvN8vVrSnXcQtJ/BoQVQ65ox8Ielyx0/I45n0aZE+1JGAhW96qsQleJkN0ihrtZOTO2jKJD5eNNk95uMKKkwyzM9CdtEnKf4zmieRWjQ0vFTXTyHkPu++hp3fLClQWd2p64nQvDPJLXmSqIJRU9TKqSILA0xqpDVJjShQkeW6sIlvaCMENmo7TFh4MYgGUnL3sGbGdRsxTQ0fEUrJHCiNHovPhVmIWL62z2o8+I99HdJC9iiCGE/u08xIGFWzXbhZx9zD/APs2Of/WdLdzwOd9BlAeBB0KADYp99UzOd3EakenD/iJYPJxJxGwlzbHg82u0QJF9iv6+h1hXrzt3pp/kSDy9wqgXRI4ooXmwtCd5eZ9A1yILlWWMs+ziWegQEw91qY5z28L3jgnFtEg4A4VY8NPgGwj/NlQDKCNBb5qsXuRS+iEpmYIEBTHM/B1H1uhL2BW3T0Dq4g+w6smvoQaI1/93FMiZqPuOcP1JddgY/zj4yEIktpqXWidzEaPQoyTfF6QP8LDazPcMX1morWBOABxs3I+KYKalhcuoT1I9RyJ+UpPZivlvR9AetiiJJ1mp2H9s6twI5DZpxVxpQ3L1A34u7w8e6oG7D0dZR/VtUoN1s+b7qpqlkDz7zUDNX4A75mjYso2XM0vYoa4oWiVjLC1ESvE4NkaydtAQP2uuUA1pH2nzJAgpVyXblm4uFQs4xoBbxn1lS1rp1B+1ZriXI5zpVG0QLeaX8yFvYYdb7g+KCgbAeWT9oNobzvFro3d07EmdK1fY6vn27PNHtegk6LvzLXFoZRCzRoTOiJgR8FWxcb40Kh/6EpqsGEhtWgcOoLD5YMVQEEA45Y5jLJ0QO4sWU6jmd/Tf8ehFAHK42G7+KcunA0ZLcRI5kyL+wc5/T8Els2vTN6TGa2k9rs18GyEeEYXrKbxqUJYtfYfyPKGW+5im9q35Hef1W1t3gyyDEylG+nEFmbfcOuQRCqz7prB8WSi5y7nOa+tRvQdqf4Uf3CVm2Fa1t4S+c5i+4VKisowoj50jpb/kfxAy7G9LGTZ045gkS/cvog9O65OFFyIDtOsbVOQWCQPcHtg3gh2K76hykJspQgtzXj8Nz9yYv5+ddV534uF+XMyH/0q2vl8ONzb+GNXe0but2KswCd1dyqvX8HFhnu4N5NtKLckkn5+3dUfwnUgXN3+bVetVChZjiDDgaRcxWTV4rXhfyYcRzvQ0eod7Im2DxFTugMvI9VZSH/YTld8egARNsV9oCNy3jASygiUZS/s0GoM3sbt5Fw4E2RNwKAmU52F+BRkCzpj6vcVnuv0YzNQjYQ014RRj7ZZbrgpKpRr2QDliPVAFc0YS2IaPLmpZ3iNJFzJSUF+aeloedaLgj6GA//+YpJKAEJlKeWPJfqBOJn6aP80EwoMsVaf2eFEOgAa22cN65/EH64tmDgJM25ADID3wud/4zSzg/8dMGm2RohT0E1cbzwi8cuALHKbG/XfCA8rrJf8fX0xd9p8LkWlLW8UvzrB6BMUNa6hJJucldwr+4ARXPUk3aH5/q74EDKrWETGukcVFicri6Iy3CY1/mO5QtMgWd/qNCQxScoBRrXxOfNU9/0nXIID6dkv1oxQOI5OmwKXCc1CHkjtWSHz9OB7XdF49WUE7SbRUBW43vasNFHlLkhefivpec+MRfC9wsa3lax8RCCFJ2uV+8/lNngEDLBgVenTc6yP8MLGvzJ01yP0iNn9iV/Fuu0XGuzy2uu44YCd2JVoshdN/gXc86R9wZpGwpiDaM+TEdnEU8GfvPgpZlDPSLioy0YumchDktJpWCAYqT/TpbNqtZt/HjCaU5ykkvohji57ZYuwtUEce1PcHMcP9GpMS75lImAAfeQ0ijXMYxbrtptWkVhpKJAaJE6E5zIgg3C1bsKBCDcWYp0lcjrWOWGR0z6hZhs2KV3P1IAElB87i4lgpgXg5qRYFs8UF3kzAUcKhaFoQVbe3cEwgYPMLbZOiv5wnW39MgT04XU00EwXnpFtHIfi6B5StbJyBwj2OJuFvbjcgLZd/advhgmVoAb8V5HgSIjtrvyi8Qtdz0wc9CI4WTk+pdup/WAdgcXtI01cIi5z2JdrQhagSyBMKQTuVYWpIY93moywU/WQELIX9gUCoMrBW7HVx4N0HZQW2m++dlrH26hmqczVK2HztbpMwQt13XcLfhBdqaoyD/ocSkfN/ImGOvsIjbX3dzu5NyMeHsFBlSyWBLkbVsmSyCth0ESKXTemgKiTcsyfuD0BdBHp0HFIpC3YVJAUh6kVrL1DxY/fnQwqzGzwFWm0lnmQCUru/19gIsJ+GchwrRKYBPf1dtUmWxNG+TNwGG4Bz5VvFVc00QA3FC2z9bIt0U5Ages1KIeeo++oy5LM2OkiYV5uuleUfQ98TfeqEjXOiTLI0Mx2QTOjbWRmp6t/2qWOC10h4J2HCAEhJ1MapoSctbJ06N4kOtHREZpIN1bNb6NFhOmlVwd8jjQ6Kf5NzQ36xNR0WXpo783BZ2RqqjlFhig8bfgeJ6HhWmDnhBGMKMtj7+FlTY+gMBWtU3Xx+IDpP1WeqvmGMewObQoRIg5bRnR5yz6KRST7IYDYzpBFDZ55nZt0gGwMtsTNaRaEJ81uLhPDUD2mZbLM9g8a93d6LGwTFQbHZVs1X0hBrcQAuhNv7RYmuoPavFNijn3yeoAHiAmIntKYu9L+KPQ8SMI9QWFnbrAunlDWy9cMCgIM8tchSQNPc+jNVzSU2yrP07nPpmLvVOlJLoE8QVFlPeSC5P+ILzNeVvx4OYPlXCzKshY8BbiIW9PcAp9g6AvdHJ27U1Y0pDHqhL/7e96tYhK5TJL8jvGxud7ERhwIWbb+C/VGCyg6gD2MfF1EJnyk52G5Kj7jXf1OKNlGRuQktpsSnloxi3FmWxaAeRVa61DOq41HzKDoCHkQawgPreQ4ykuGFDId02yTdDVj2grncxQADaVcZVslKSqPCfDMzgdcTIayw4uPPpy+3udhrNvJkN3c1u7B0gItS5RFwTQWX3DahrHbHX/kETq8HU5G3IMZcAeqqVKeMJNTv3Flg6gaVvmmMU5d6UyC5wBU8ZqkWxyAWgDNjp4kEBoNQ49/YPALiulUbm9Uo2FaS/muxpi8autK3nNFgCB3NuzKc7x08nmpRwZ3R1CFQ7nPe3/0xowzyxgphn/0AxoRD8MtlhSM42842UJ8CAkPR074zHWHjpKB7rNcdk93/8BWVfFD2IV0jYUXHiSubHY7WMsH16gEiv/O3ZouC4q2J1dovySrG2BDvCefXYMC/sF5lYxWPHV2Rz4bWk0aBfpwmaY3mvvTXTOCJJUKtriIJAdCac1zRpCd4SIbiGw2J/gzS/Th6fRtgx8ntqc0wUftXRd7i4kf8F75sDu6joJETqeaeuoDFpioHLc2LSc5iCC7QqGRF3Lks8TOcQmSANEceojHMMYeSTjUr3j9dG9lir2jQj4DLypjPt31VA4OzMoD31U3yvKk4/f7i2nTjtaIeqdkM4dmShjHYe330f9wNHg+97WF2yTHPQ/MCLSeIVbc3WKX1Fj5Sc86mhH3kvptGSHnmSSmiGrzBobo33wtv+RkUG+dMnrYZb2y14gysu2ZDDkzn1LjKnFDHuoEYxMPdwaFsx5DHik/a7Ct9wGsEzDwaLdkzEQefcOqYS1MWhAq7fI4Hv5c4T26RN+3XI+91657u7H21QUTjdztaI05MO2mtWsbwbgby880zTCB/DbmD8GtHYPejS5aZgNdrTXkIKdbK9JrSBcmAr3z3VIvgGoFpwBujbTw7QTyuL2f2gCtUPrR+SZqurwX7gMq1ubdUQJR8hq4j9fqvGsX/HLW5zAayKIBO7OrttTCw7V3X3Y2TtKqraWbivskmaqpvBHq9qMRLRzp/QmX+P4yMhIlqrGdV640U2PFeqLHQrj7j6WiXVTM4mfK+fOVEgSSNbEHWbdbGeI1rnNxanW23wwrB8DhJy8n8rF4bBoOXuq5uUtVQSMVINheqrEdxNUSPPPDVgwIrmJisp/+hgpA+mldT0cSq/LUR1sRXwhZDGmNd5zGl4SSABQmd7+EmD6f6EY5YJFTyNLBzXFh21LyNBpRvLeloxyn3sjFX2k7V+pCpbg+f2AKWl90ipA6jdsFigm6IOAwaqs04CB4h7Vp2J2vgJKjrSAVV/Ee9c69534+IWf5fiSfzL4oQ8CThMxQLxv33CJwQ2eHtBuYdbUf1jH+R/evqEFJIgXt+FpVbHjjsGPn1H7RodN1boZMfnFomCQRBu2P/1tr3ezqZpjrL6cOpaZrtuiE4TBT6EiuP1bTrTiZx9uR8jgIzz8Hb1aBvte1EGjHN/wiS9E5nTiHDyeD3GLBrfcXJ1iwx3PqFMJhSwQR63VlTeHCcu/VQyYRjoiEkHIivaZjAo7OG3CCWxWBkD4Wsa8yxZUNo17n91HiBNjlZfO3sc6myZM9H0eIvAl49nNjdSq4rEV8daOHc7S0gDmUpHVL4qHETCLx6QBUxv+wEhHaqea3q4h0opYGFsNaJQhvJWbPgS5Bd6uzxejIzF+A+UlU5fAWE7j+LyZ7DuZq92RWSgI/DDJmY0ZSdppPEudyKFXnuJCmEBwY0xJRf/b/NEQ4FCapOaB0svPoFcTulv9oFM49MW3W/K7RNPdTsxVZV42K7xFbQlnQMYUPdhU5SV9ZL8v0BEkS6CiBcq+FbaMn945Q/oAFyqzqbXhPbdkWBGbpDrtwBrUQWFMk9NLlDL6KG6F3AogDKlUpVjF11qSCUoDR65WNbsHCJOK5QR7D+vtymCcv5RMLg4AeUJ5KDD7VInXCkqZlmN+BjzMPv56szhxNuTojxk9MVZwMjgkSYc/4OrMdKiaU4M1CHA8B2Oz1v+2+49oaGxI/qh9QP0aM5GLhuVRe1POkBfChfbPY9doPB53+11M6OVXCoACW+aSrBHVA0SJgVRVhFMRZiuI55y3gNYuMBH4qU/tO94/vs8mpTB37sQW2nF3ysvG2v7p5bq1HjLgO4CQQkZd9lyo6YjoHjOyZUFBAjzAm3XcY1AqgEN/l6s4FPwQmsxC6N9wlF22hr3QqRjKu/docDdTq3t6RU2AJvQwQ35myW31uhRCHKvwQiYLHblfSzEVnhs1dRzfxylW9wW0lYksuPjHJvCONwmtVfVIx161jI5Wm+5anpGt8Dsic9rWQ/zBMkJjTZ1cjCs/n2TiqgNUtaDl4hDDIYkzzKi8J5s1FgEKbsudgyW40zERSrbTO8yU880M9ZKbQQv5Xs4VQxxywgW8stTRBhlGHKM5KsTqbaqRQ+Nq4HUDrq4cDoM2lgK7qsHZGmCrK6zL28LAU7e/BCsqp03O+syp83+rkDPT1T0ZzPmScY24VfNaAD8wufB+oO8QNrgzUK8qKK+LLloIJcJcLQI2zIC8Ft/wDxmHSscrd4LUuqMGaMF9dxzoUVciiS3KntLqsqYbNncSafxGnqEFJaOtWntoJ6MCUbwWdLkOfT3z5mbh9rTXoBsCevahcc5Ir+Q26dH7Jez54dmYgfgHUnd4d/2RD6THPTMQAUo2phJSTkBT3MxtXxE0ZpUMtRcnsvYjpl8oxdUEREH3hU5fSRxNgeGsBrl8sPjVyv+NuvRkPY9UqLUnQqLy3B/Og8oG1qF2w7Sbk4bH5XKQE5zSDIBlbpz9U+ap7agfDjeplODMxJUFg4ZNT40/jfePECzrxOYot36gKHDVJdtrHgHTcjtYwCBiDBP9PNJ59aSeyESTCvQBPRTJ9tzXMYEQCqyfIvcHDAQBZ+7aiyLqaB83KnL56N4cSRurY5G8728Mx8wNEcWjgUX/EBsXsJsegQRBzdNP40QGFVCWPKj+Lr+IQlFO1fpnTlEq/fjCbxrfGoEiA2B6EIWJAq5nyUlsZ/oOERuDfzT3xCnnLegVx1QBkme0rWsLY5JBUveJpWJyzPuU5+y+FZEE35I1sF0sDc4Bxh7Q3f5FZuGNnvZ5wPjt3xFwY0QX0nOvjy4sZL+KVjQVUbFgTHHS9CrLLgYUb5eRK4qaK8qhsvdTd+na1cQdvA74lO4ZI+oRN+6PZsh6qEmoeVDY19ZRP1NVsJ/EwdOCVVXk+0YwoTxxERm0EsWXsDZinCyB+SNNktFLGJ0TN1wcEVsd9Tu9tTwFzXfQkgEMyPg7SLf0w2suHgXP2xtoPzMbUJsL3gUSN6NKC2CuRVwVRCA7k0h8AWAHPr3lpptXco5/TMWe297W5zaPa6OqYdfMkGpDXwdsyzedvIWyTgmnW63bU+Iv7hDFEtAx6J7AM1mI9rZEQF6IYwa7CCE5P2ZqSErp0q8oJxrNt91e0jUnhdp0n4r5G6us1jR6MBe9qJ1gjQlK4/Rxv/8fJtJwiNHeoejrrxm8nBTPLD57De8fjQwB5NFwS4l8FRATgNdifjej7K8sUHXkSMwEAi2pd+tzPD2RnPpz2SvH4IHx1EEAHKf+1gNSUAloOtx7OFDGzqBoOoJbh3n2Tk4bfe9TXCz6l2rikv7I7X/hNT/comGszH9epojx1aUQmoFKw36KtIww9MfkW7eFLifOSiEoik3baujpg3NfPZIJLHPLuvUoUcO4m01GAD11LQEQ6mw"}</script>
+<script>
+
+function normClave(s){return s.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,'-');}
+function b64(s){var b=atob(s),u=new Uint8Array(b.length);for(var i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u;}
+async function llaveDe(clave,sal,it){
+  var base=await crypto.subtle.importKey('raw',new TextEncoder().encode(normClave(clave)),'PBKDF2',false,['deriveKey']);
+  return crypto.subtle.deriveKey({name:'PBKDF2',salt:sal,iterations:it,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['decrypt']);
+}
+async function abrirCon(d,clave){
+  try{var k=await llaveDe(clave,b64(d.s),d.it); return new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(d.iv)},k,b64(d.c)));}
+  catch(e){return null;}
+}
+function claveGuardada(c){try{return localStorage.getItem('udi-clave-'+c)||sessionStorage.getItem('udi-clave-'+c);}catch(e){return null;}}
+function guardarClave(c,v){try{localStorage.setItem('udi-clave-'+c,v);}catch(e){} try{sessionStorage.setItem('udi-clave-'+c,v);}catch(e){}}
+function olvidarClave(c){try{localStorage.removeItem('udi-clave-'+c);sessionStorage.removeItem('udi-clave-'+c);}catch(e){}}
+
+(function(){
+var C='fundamentos-calidad-auditoria', D=JSON.parse(document.getElementById('datos').textContent);
+async function abrir(v,callado){
+  var t=await abrirCon(D,v);
+  if(t===null){ if(callado) olvidarClave(C); else document.getElementById('error').textContent='Esa clave no abre este curso. Revísela en el anuncio de Canvas.'; return; }
+  guardarClave(C,v);
+  /* El reproductor del deck (lienzo) arma su lámina con este texto ya descifrado. */
+  window.nazasLienzoHtml=t;
+  document.open(); document.write(t); document.close();
+}
+var g=claveGuardada(C); if(g) abrir(g,true);
+document.getElementById('f').onsubmit=function(e){e.preventDefault(); document.getElementById('error').textContent=''; abrir(document.getElementById('clave').value,false);};
+})();
+</script>
+</body></html>
