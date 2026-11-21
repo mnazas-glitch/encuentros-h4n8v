@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Grabación de la sincrónica 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0f14;--panel:#121a22;--panel2:#16202a;--ink:#e8f0f7;--muted:#9fb0c1;--line:#24313d;
+  --acc:#4cc9e8;--acc-ink:#062330;--ok:#6fd19a;--alert:#ff8a8a;color-scheme:dark}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#f5f7f9;--panel:#ffffff;--panel2:#eef3f7;
+  --ink:#13202b;--muted:#566676;--line:#d6dee6;--acc:#0b7fa3;--acc-ink:#ffffff;--ok:#1d7a4a;--alert:#b3261e;color-scheme:light}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "IBM Plex Sans","Segoe UI",system-ui,sans-serif}
+a{color:var(--acc)}
+.envoltura{max-width:1040px;margin:0 auto;padding:32px 16px 72px}
+.antetitulo{color:var(--acc);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;line-height:1.2;margin:.25em 0 .4em}
+h1{font-size:clamp(1.9rem,4.5vw,2.8rem)}
+h2{font-size:1.5rem}
+.bajada{color:var(--muted);max-width:66ch;margin:0 0 8px}
+.cabecera{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:28px}
+.firma{color:var(--muted);font-size:.92rem;margin-top:14px}
+.rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.tarjeta{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 20px 18px;display:flex;flex-direction:column;gap:8px}
+a.tarjeta{color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
+a.tarjeta:hover,a.tarjeta:focus-visible{border-color:var(--acc);outline:none;transform:translateY(-2px)}
+.tarjeta h2,.tarjeta h3{margin:0}
+.meta{color:var(--muted);font-size:.9rem}
+.sincronica{display:grid;grid-template-columns:96px 1fr;gap:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.sincronica + .sincronica{margin-top:14px}
+.numero{font:600 2.6rem/1 "Source Serif 4",Georgia,serif;color:var(--acc)}
+.numero small{display:block;font:600 .72rem "IBM Plex Sans",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.tesis{font-family:"Source Serif 4",Georgia,serif;font-size:1.12rem;margin:4px 0 12px;color:var(--ink)}
+.acciones{display:flex;flex-wrap:wrap;gap:10px}
+.boton{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:10px;font:600 .95rem "IBM Plex Sans",sans-serif;
+  text-decoration:none;border:1px solid var(--acc);background:var(--acc);color:var(--acc-ink);cursor:pointer}
+.boton.secundario{background:transparent;color:var(--acc)}
+.pendiente{color:var(--muted);font-size:.92rem;border:1px dashed var(--line);border-radius:10px;padding:10px 14px;display:inline-block}
+.candado{max-width:520px;margin:10vh auto 0;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px 24px}
+.candado form{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
+.candado input{flex:1 1 220px;min-height:46px;font:17px "IBM Plex Sans",sans-serif;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.candado input:focus{outline:2px solid var(--acc);outline-offset:1px}
+.error{color:var(--alert);min-height:1.4em;margin:6px 0 0}
+.nota{color:var(--muted);font-size:.88rem;margin-top:36px;border-top:1px solid var(--line);padding-top:14px}
+.volver{color:var(--muted);text-decoration:none;font-size:.92rem}
+.volver:hover{color:var(--acc)}
+.pie{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+button.enlace{background:none;border:0;padding:0;color:var(--muted);font:inherit;text-decoration:underline;cursor:pointer}
+@media (max-width:560px){.sincronica{grid-template-columns:1fr;gap:6px}.numero{font-size:2rem}}
+
+.partes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px;margin:22px 0}
+.parte{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;gap:6px;text-align:left;color:var(--ink);font:inherit;cursor:pointer;min-height:44px}
+.parte.on{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
+.parte small{color:var(--acc);font-weight:600;letter-spacing:.04em}
+.parte b{font-size:1.02rem;line-height:1.3}
+.parte span{color:var(--muted);font-size:.85rem}
+.marco{background:#000;border-radius:12px;overflow:hidden;aspect-ratio:16/9;max-width:100%;display:grid;place-items:center}
+video{width:100%;height:100%;display:block}
+.estado{color:#c9d4de;text-align:center;padding:20px}
+.estado.error{color:var(--alert)}
+.barra{height:6px;background:#2a3540;border-radius:3px;overflow:hidden;width:min(320px,70vw);margin:10px auto 0}
+.barra i{display:block;height:100%;width:0;background:var(--acc)}
+.momentos{margin-top:16px;display:grid;gap:6px}
+.momentos button{display:flex;gap:12px;align-items:baseline;background:transparent;border:1px solid var(--line);border-radius:8px;color:var(--ink);font:inherit;padding:8px 12px;cursor:pointer;text-align:left;min-height:44px}
+.momentos button:hover,.momentos button:focus-visible{border-color:var(--acc);outline:none}
+.momentos code{color:var(--acc);font:600 .9rem "IBM Plex Mono",Consolas,monospace;min-width:56px}
+.pedir{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.pedir input{min-height:44px;font:16px "IBM Plex Sans",sans-serif;padding:8px 12px;border-radius:10px;border:1px solid #33414e;background:#0d141b;color:#e8f0f7}
+</style></head><body>
+<div class="envoltura">
+<a class="volver" href="../../">Volver al curso</a>
+<header class="cabecera" style="margin-top:14px">
+<div class="antetitulo">Fundamentos de la Calidad y de la Auditoría en Salud, sincrónica 2</div>
+<h1>El promedio no audita: estadística descriptiva para auditar</h1>
+<p class="bajada">Grabación del encuentro del sábado 21 de noviembre de 2026, partida por tema. Elija una parte: se descarga cifrada y se abre en este navegador con la clave del curso. Debajo del video están los momentos de cada lámina para saltar directo.</p>
+</header>
+<div class="partes" id="partes"></div>
+<div class="marco" id="marco"><div class="estado" id="estado">Elija una parte para verla.</div></div>
+<div class="momentos" id="momentos"></div>
+<p class="nota">El video trae la voz y el nombre de sus compañeros: es solo para el grupo del curso. No lo descargue ni lo comparta fuera del aula. La presentación de esta sesión, con sus notas de estudio y sus fuentes, está en la página del curso.</p>
+</div>
+<script>
+
+function normClave(s){return s.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,'-');}
+function b64(s){var b=atob(s),u=new Uint8Array(b.length);for(var i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u;}
+async function llaveDe(clave,sal,it){
+  var base=await crypto.subtle.importKey('raw',new TextEncoder().encode(normClave(clave)),'PBKDF2',false,['deriveKey']);
+  return crypto.subtle.deriveKey({name:'PBKDF2',salt:sal,iterations:it,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['decrypt']);
+}
+async function abrirCon(d,clave){
+  try{var k=await llaveDe(clave,b64(d.s),d.it); return new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(d.iv)},k,b64(d.c)));}
+  catch(e){return null;}
+}
+function claveGuardada(c){try{return localStorage.getItem('udi-clave-'+c)||sessionStorage.getItem('udi-clave-'+c);}catch(e){return null;}}
+function guardarClave(c,v){try{localStorage.setItem('udi-clave-'+c,v);}catch(e){} try{sessionStorage.setItem('udi-clave-'+c,v);}catch(e){}}
+function olvidarClave(c){try{localStorage.removeItem('udi-clave-'+c);sessionStorage.removeItem('udi-clave-'+c);}catch(e){}}
+
+(function(){
+var C='fundamentos-calidad-auditoria', PARTES=[{"archivo": "s02_parte1.bin", "titulo": "Bienvenida y el caso: el promedio no audita", "min": 18, "mb": 28.4, "momentos": [[9, "Bienvenida y el cambio de tema"], [102, "Por qué R y no solo Excel"], [539, "El escenario: 600 expedientes y un promedio de 138"], [769, "Lo que respondieron en el chat"], [883, "Por qué el promedio no basta"], [944, "La ruta de la sesión"]]}, {"archivo": "s02_parte2.bin", "titulo": "Cuántos expedientes: marco y tamaño de muestra", "min": 24, "mb": 31.5, "momentos": [[4, "De la población a la variable: el marco muestral"], [145, "Lo del escritorio no es una muestra al azar"], [162, "Tamaño de muestra: 40 expedientes"], [176, "Pregunta: ¿fórmula o inteligencia artificial?"], [371, "Los supuestos: confianza, p y error"], [713, "Más precisión, más expedientes"], [969, "De dónde sale la p esperada"], [1331, "Pregunta: la precisión y el error"]]}, {"archivo": "s02_parte3.bin", "titulo": "Kappa y la matriz del auditor", "min": 9, "mb": 11.8, "momentos": [[4, "Concordancia entre auditores: kappa de 0.68"], [207, "La matriz: cada variable con su medida y su gráfico"], [389, "Las variables numéricas"]]}, {"archivo": "s02_parte4.bin", "titulo": "Lo que se cuenta: gráfica, tabla y Pareto", "min": 20, "mb": 25.5, "momentos": [[4, "Una buena gráfica"], [243, "Una buena tabla"], [349, "Pregunta: lo que dice el manual APA"], [534, "Registro completo: proporción contra el estándar"], [637, "Variable ordinal: frecuencias y acumulado"], [900, "El Pareto de las omisiones"]]}, {"archivo": "s02_parte5.bin", "titulo": "Lo que se mide: dispersión, forma y mediana", "min": 15, "mb": 18.2, "momentos": [[9, "Controles en el año: barras separadas"], [296, "Misma media, distinta dispersión"], [364, "Pregunta: la desviación estándar"], [465, "Cómo se lee el diagrama de caja"], [704, "Media o mediana: las esperas"]]}, {"archivo": "s02_parte6.bin", "titulo": "Los hallazgos, el control y el lote", "min": 11, "mb": 31.4, "momentos": [[4, "Los cuatro hallazgos"], [130, "El gráfico de control mes a mes"], [198, "Aceptar o rechazar un lote"], [291, "En vivo: el voto"], [371, "Los datos no se le comparten a la IA"], [504, "Comentario: la regla en el trabajo"]]}, {"archivo": "s02_parte7.bin", "titulo": "La práctica: qué son R y RStudio", "min": 7, "mb": 11.3, "momentos": [[4, "La página de la práctica en el aula"], [256, "Qué son R y RStudio"]]}, {"archivo": "s02_parte8.bin", "titulo": "En vivo: leer la base con la IA y RStudio", "min": 16, "mb": 33.4, "momentos": [[6, "El primer prompt a la IA"], [204, "La IA devuelve el código"], [284, "RStudio: abrir el proyecto"], [553, "La ruta del archivo en Windows"], [733, "El diccionario de variables"]]}, {"archivo": "s02_parte9.bin", "titulo": "En vivo: muestra, kappa y el primer gráfico", "min": 18, "mb": 43.8, "momentos": [[4, "Tamaño de muestra con la IA"], [69, "Comentario: la vigilancia regional en tiempo real"], [268, "Los resultados: 40, 83, 27 y 45"], [448, "Kappa calculada en R"], [537, "El gráfico del registro completo"], [807, "Un error y cómo se corrige con la IA"], [1033, "El gráfico listo y cómo exportarlo"]]}, {"archivo": "s02_parte10.bin", "titulo": "Preguntas, colores, el Pareto en R y cierre", "min": 16, "mb": 37.7, "momentos": [[19, "Pregunta: qué se le sube a la IA"], [194, "El auditor y sus 40 expedientes"], [299, "Otras interfaces además de RStudio"], [610, "Pregunta: los colores de los gráficos"], [652, "El Pareto en R"], [861, "Cómo seguir por su cuenta"], [915, "Pregunta: la guía desde cero"], [970, "Despedida"]]}], ITER=200000, urlActual=null, $=function(x){return document.getElementById(x);};
+function mmss(s){var m=Math.floor(s/60), ss=Math.floor(s%60); return (m>=60?Math.floor(m/60)+':'+String(m%60).padStart(2,'0'):m)+':'+String(ss).padStart(2,'0');}
+function estado(t,err,p){ var e=document.createElement('div'); e.id='estado'; e.className='estado'+(err?' error':''); e.textContent=t;
+  if(p!==undefined){ var b=document.createElement('div'); b.className='barra'; b.innerHTML='<i style="width:'+Math.round(p*100)+'%"></i>'; e.appendChild(b); }
+  var m=$('marco'); m.innerHTML=''; m.appendChild(e); return e; }
+PARTES.forEach(function(p,i){
+  var b=document.createElement('button'); b.className='parte'; b.type='button';
+  b.innerHTML='<small>Parte '+(i+1)+' de '+PARTES.length+'</small><b></b><span>'+p.min+' minutos'+(p.mb?', '+p.mb+' MB':'')+'</span>';
+  b.querySelector('b').textContent=p.titulo; b.onclick=function(){ver(i,b);}; $('partes').appendChild(b);
+});
+function pedirClave(i,boton,msg){
+  var e=estado(msg,true);
+  var f=document.createElement('form'); f.className='pedir';
+  f.innerHTML='<input autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Clave del curso" aria-label="Clave del curso"><button class="boton" type="submit">Abrir</button>';
+  f.onsubmit=function(ev){ev.preventDefault(); var v=f.querySelector('input').value; if(v.trim()){guardarClave(C,v); ver(i,boton);}};
+  e.appendChild(f);
+}
+async function bajar(url){
+  var r=await fetch(url); if(!r.ok) throw new Error('No se encontró el archivo del video.');
+  var total=+r.headers.get('content-length')||0, lector=r.body&&r.body.getReader?r.body.getReader():null;
+  if(!lector) return new Uint8Array(await r.arrayBuffer());
+  var trozos=[], n=0;
+  while(true){ var x=await lector.read(); if(x.done) break; trozos.push(x.value); n+=x.value.length;
+    if(total) estado('Descargando… '+Math.round(n/total*100)+' %',false,n/total); }
+  var u=new Uint8Array(n), o=0; trozos.forEach(function(t){u.set(t,o);o+=t.length;}); return u;
+}
+async function ver(i,boton){
+  document.querySelectorAll('.parte').forEach(function(x){x.classList.toggle('on',x===boton);});
+  $('momentos').innerHTML='';
+  var clave=claveGuardada(C);
+  if(!clave){ pedirClave(i,boton,'Escriba la clave del curso, la del anuncio de Canvas.'); return; }
+  try{
+    estado('Descargando…',false,0);
+    var u=await bajar(PARTES[i].archivo);
+    if(String.fromCharCode(u[0],u[1],u[2],u[3])!=='UDV1') throw new Error('El archivo no es un video del aula.');
+    estado('Abriendo el video…');
+    var k=await llaveDe(clave,u.slice(4,20),ITER);
+    var mp4=await crypto.subtle.decrypt({name:'AES-GCM',iv:u.slice(20,32)},k,u.slice(32));
+    if(urlActual) URL.revokeObjectURL(urlActual);
+    urlActual=URL.createObjectURL(new Blob([mp4],{type:'video/mp4'}));
+    var v=document.createElement('video'); v.controls=true; v.preload='metadata'; v.src=urlActual; v.setAttribute('playsinline','');
+    v.oncontextmenu=function(e){e.preventDefault();}; v.setAttribute('controlsList','nodownload');
+    $('marco').innerHTML=''; $('marco').appendChild(v);
+    PARTES[i].momentos.forEach(function(m){
+      var b=document.createElement('button'); b.type='button'; b.innerHTML='<code>'+mmss(m[0])+'</code><span></span>';
+      b.querySelector('span').textContent=m[1]; b.onclick=function(){ v.currentTime=m[0]; v.play(); v.scrollIntoView({behavior:'smooth',block:'center'}); };
+      $('momentos').appendChild(b);
+    });
+  }catch(e){
+    if(e&&e.name==='OperationError'){ olvidarClave(C); pedirClave(i,boton,'Esa clave no abre este video. Revísela en el anuncio de Canvas.'); }
+    else estado(e.message||'No se pudo abrir el video.',true);
+  }
+}
+})();
+</script>
+</body></html>
